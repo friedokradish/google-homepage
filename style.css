@@ -2,17 +2,15 @@
 .flex-nav{
     display:flex;
     justify-content:space-between;
+    margin-top:-15px;
 }
 
-.flex-nav-l{
-   
+.flex-nav-l{    
     display: flex;
     align-items: center;
     /* font-size: 14px; */
 }
     
-
-
 .flex-nav-r{
     display:flex;
     align-items:center;
@@ -20,9 +18,8 @@
 }
 
 
-li{
-    margin-right:20px;
-}
+li{margin-right:20px;}
+
 li,a{
     list-style: none;
     text-decoration: none;
@@ -30,9 +27,9 @@ li,a{
     font-family: Roboto,Arial, Helvetica, sans-serif;
 }
 
-a:hover{
-    text-decoration: underline;
-}
+a:hover{text-decoration: underline;}
+
+
 
 .signbutton{
     background:rgb(26, 115, 232);
@@ -47,37 +44,77 @@ a:hover{
     text-decoration: none;
     background: rgb(43, 125, 233);
     box-shadow: 0 1px 2px 0 rgba(66,133,244,0.3),0 1px 3px 1px rgba(66,133,244,0.15);
-
 }
 
 .applink{
-    color:#5f6368;
+    fill:#5f6368;
     width:30px;
     height:30px;
     padding:5px;
-    
 }
 
-.applink:hover{
-    
+.applink:hover{    
     background: #eff0f0;
-    border-radius: 50%;
-    
+    border-radius: 50%;    
 }
 
 
 .flex-main{
-    
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     padding: 20px;
+    margin-top: 50px;
     
 }
 
-.heading, .searchbar, .buttons{
-    margin: 20px;
+.heading{
+    margin-bottom: 0px;
+    font-size:77px;
+    font-family:cursive,Arial, Helvetica, sans-serif;
+    font-weight:900;
+    color:#306030;
+
+ 
+}
+
+.searchbox{    
+    display:flex;
+    border:1px solid #dfe1e5;
+    border-radius:20px;
+    margin-bottom:20px;
+    width: 580px;
+    max-width:584px;
+}
+
+.searchbox:hover{box-shadow: 0 1px 6px rgba(32,33,36,.28)}
+    
+
+.searchbar{
+    border-color: transparent;
+    margin-top:3px; 
+    border-radius:50px;
+    padding:7px;    
+}
+
+.searchbar:focus-visible{
+    outline: transparent;
+}
+
+.magnifying-glass-svg{
+    width: 20px;
+    height:20px;
+    margin-top:3px;
+    margin-right:5px;
+    fill: rgb(154, 160, 166);
+    padding:7px;
+}
+
+
+footer{
+
+
 }
 
 /* 
@@ -86,4 +123,10 @@ a:hover{
 }
 .searchbar{
     margin:auto;
+
+    Colors grabbed from Mughal Flag
+    #306030 mughal-green
+    #fcd116 mughal-yellow
+    #d40d0d mughal-red
+
 } */
