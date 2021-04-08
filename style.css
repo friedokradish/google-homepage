@@ -1,19 +1,42 @@
 
+
+/*  #306030 mughal-green
+    #fcd116 mughal-yellow
+    #d40d0d mughal-red  */
+
+.master-box{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    
+}
+
 .flex-nav{
     display:flex;
     justify-content:space-between;
     margin-top:-15px;
+
+    padding-right:0px;   /*HERE*/
+    margin-left:0px;
+    margin-right:0px;
+ 
+   
 }
 
 .flex-nav-l{    
     display: flex;
     align-items: center;
+    flex-shrink: 0;
+    
     /* font-size: 14px; */
 }
     
 .flex-nav-r{
     display:flex;
     align-items:center;
+    flex-shrink: 0;
+  
+  
     /* font-size: 13px; */
 }
 
@@ -22,7 +45,7 @@ li{margin-right:20px;}
 
 li,a{
     list-style: none;
-    text-decoration: none;
+    text-decoration: none; 
     color: #000;
     font-family: Roboto,Arial, Helvetica, sans-serif;
 }
@@ -34,10 +57,12 @@ a:hover{text-decoration: underline;}
 .signbutton{
     background:rgb(26, 115, 232);
     color:#fff;
-    padding:9px 23px;
-    text-align:center;
-    vertical-align:center;
+    padding-top:9px;
+    padding-bottom: 9px;
+    padding-left: 20px;
+    padding-right:20px;
     border-radius:4px;
+    margin-right:0px;   
 }
 
 .signbutton:hover{
@@ -51,6 +76,9 @@ a:hover{text-decoration: underline;}
     width:30px;
     height:30px;
     padding:5px;
+    margin-left:0px ;
+    margin-right:0px ; 
+    margin: 0px;  
 }
 
 .applink:hover{    
@@ -65,7 +93,8 @@ a:hover{text-decoration: underline;}
     align-items: center;
     justify-content: space-evenly;
     padding: 20px;
-    margin-top: 50px;
+    flex-shrink:0;
+    
     
 }
 
@@ -84,18 +113,29 @@ a:hover{text-decoration: underline;}
     border:1px solid #dfe1e5;
     border-radius:20px;
     margin-bottom:20px;
-    width: 580px;
+    width: 100%;
     max-width:584px;
+    margin-left: 39px;
+    margin-right: 39px;
+
+    
 }
 
 .searchbox:hover{box-shadow: 0 1px 6px rgba(32,33,36,.28)}
     
+.searchdiv{
+    width:100%;
+}
 
 .searchbar{
     border-color: transparent;
     margin-top:3px; 
     border-radius:50px;
-    padding:7px;    
+    padding:7px;
+    width: 100%;
+   
+    
+    
 }
 
 .searchbar:focus-visible{
@@ -111,22 +151,81 @@ a:hover{text-decoration: underline;}
     padding:7px;
 }
 
-
-footer{
-
-
+.button  {
+    border: 1px solid #f8f9fa;
+    margin:0px 4px;
+    padding:11px 16px;
+    line-height: 27px;
+    border-radius: 4px;
+    font-size:14px;
 }
 
-/* 
-.heading{
-    text-align:center;
+.button:hover {
+    border: 1px solid #dadce0;
+    box-shadow:0 1px 1px rgba(0,0,0,0.1);
+
+    
 }
-.searchbar{
-    margin:auto;
 
-    Colors grabbed from Mughal Flag
-    #306030 mughal-green
-    #fcd116 mughal-yellow
-    #d40d0d mughal-red
+.button:focus{
+    border:1px solid #4d90fe;
+}
 
-} */
+.box{
+    flex-grow:1;
+    flex-shrink:0;
+    box-sizing: border-box;
+}
+
+
+ .flex-footer{
+    display: flex; 
+    justify-content:space-between;
+    background: rgb(242, 242, 242);
+    flex-shrink: 0;
+    margin:0px -8px;
+    width:100%;
+    position: absolute;
+    bottom:0px;
+   
+    
+    
+}
+
+.footer-links-l{display:flex;}
+
+.footer-links-r{display:flex;} 
+
+ .footer-links-r-a {color:#70757a;}   
+ .footer-links-l-a {color:#70757a;} 
+
+ @media handheld,screen and (max-width:680px){
+    .flex-footer{
+        display: flex; 
+        flex-direction:column;
+        align-items: center;
+}
+}
+
+@media handheld,screen and (max-width:535px){
+    .applink{
+        width:30px;
+        padding:5px;
+        /* margin-left:-12px;
+        margin-right: -12px; FIX THIS*/  
+    }
+
+    .signbutton{
+        margin-left: 0px;
+    }
+        
+    .flex-nav{
+        display:flex;
+        justify-content:center;
+        padding-right:10px;
+        margin-right: 0px;
+        margin-left:-5px;
+        
+    } 
+}
+
